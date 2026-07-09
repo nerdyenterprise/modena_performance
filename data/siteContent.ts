@@ -12,6 +12,8 @@ export type Vehicle = {
   manufacturer: string;
   model: string;
   year: string;
+  mileage: string;
+  transmission: string;
   price: string;
   image: string;
   imageAlt: string;
@@ -90,7 +92,7 @@ export const siteContent = {
       heading: "Exclusively considered.",
       imageLabel: "Image reserved",
       paragraphs: [
-        "MODENA represents collectors, enthusiasts and private clients through a considered approach to vehicle sales, sourcing and brokerage.",
+        "MODENA represents collectors, enthusiasts and private clients with a considered approach to vehicle sales, sourcing and brokerage.",
         "Every engagement is handled with attention to specification, provenance, presentation and long-term client relationships.",
         "Whether sourcing a single vehicle or managing an entire collection, the objective remains the same: professional representation delivered with discretion.",
       ],
@@ -111,6 +113,8 @@ export const siteContent = {
       copy: "A concise view of current and representative opportunities, prepared for future image assets and detailed provenance files.",
       backLabel: "Back to vehicles",
       yearLabel: "Year",
+      mileageLabel: "Mileage",
+      transmissionLabel: "Transmission",
       priceLabel: "Price",
       detailHighlightsLabel: "Highlights",
       enquiryEyebrow: "Private enquiry",
@@ -147,7 +151,7 @@ export const siteContent = {
       metadataDescription: "Learn about MODENA, a luxury automotive sales, sourcing and brokerage house.",
       eyebrow: "About",
       heading: "Exclusively considered.",
-      copy: "MODENA represents collectors, enthusiasts and private clients through a considered approach to vehicle sales, sourcing and brokerage.",
+      copy: "MODENA represents collectors, enthusiasts and private clients with a considered approach to vehicle sales, sourcing and brokerage.",
       paragraphs: [
         "Every engagement is handled with attention to specification, provenance, presentation and long-term client relationships.",
         "Whether sourcing a single vehicle or managing an entire collection, the objective remains the same: professional representation delivered with discretion.",
@@ -171,8 +175,8 @@ export const siteContent = {
       metadataTitle: "Contact",
       metadataDescription: "Contact MODENA for luxury automotive sales, sourcing and brokerage enquiries.",
       eyebrow: "Contact",
-      heading: "Start a private conversation.",
-      copy: "For sales, sourcing and brokerage enquiries, send a note or begin directly through WhatsApp.",
+      heading: "Begin privately.",
+      copy: "Request a consultation regarding a vehicle acquisition, sale or sourcing requirement.",
       whatsappLabel: "Open WhatsApp",
     },
   },
@@ -198,9 +202,11 @@ export const siteContent = {
   vehicles: [
     {
       slug: "mercedes-g63-amg",
-      manufacturer: "Mercedes-AMG",
+      manufacturer: "Mercedes-Benz",
       model: "G63 AMG",
       year: "2024",
+      mileage: "2,900 miles",
+      transmission: "Automatic",
       price: "Price On Application",
       image: "/images/vehicles/g63.jpg",
       imageAlt: "Black Mercedes-AMG G63",
@@ -214,6 +220,8 @@ export const siteContent = {
       manufacturer: "BMW",
       model: "X5M Competition",
       year: "2024",
+      mileage: "3,600 miles",
+      transmission: "Automatic",
       price: "Price On Application",
       image: "/images/vehicles/x5m.jpg",
       imageAlt: "BMW X5M Competition",
@@ -227,6 +235,8 @@ export const siteContent = {
       manufacturer: "Porsche",
       model: "911 GT3 Touring",
       year: "2023",
+      mileage: "5,200 miles",
+      transmission: "Manual",
       price: "Price On Application",
       image: "/images/vehicles/gt3.jpg",
       imageAlt: "Porsche 911 GT3 Touring",

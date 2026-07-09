@@ -78,6 +78,8 @@ export default async function VehicleDetailPage({ params }: Props) {
           <dl className="mt-8 grid grid-cols-2 gap-4 border-y border-white/10 py-6 text-sm">
             {[
               [siteContent.pages.vehicles.yearLabel, vehicle.year],
+              [siteContent.pages.vehicles.mileageLabel, vehicle.mileage],
+              [siteContent.pages.vehicles.transmissionLabel, vehicle.transmission],
               [siteContent.pages.vehicles.priceLabel, vehicle.price],
             ].map(([label, value]) => (
               <div key={label}>

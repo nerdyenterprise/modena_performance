@@ -19,11 +19,13 @@ export function VehicleCard({ vehicle }: { vehicle: Vehicle }) {
         </div>
         <div className="pt-6">
           <div>
-              <p className="text-[0.66rem] uppercase tracking-[0.34em] text-champagne">{vehicle.manufacturer}</p>
+            <p className="text-[0.66rem] uppercase tracking-[0.34em] text-champagne">{vehicle.manufacturer}</p>
             <h2 className="mt-3 font-serif text-3xl leading-tight text-linen sm:text-4xl">{vehicle.model}</h2>
           </div>
-          <div className="mt-6 flex items-center justify-between gap-6 border-t border-champagne/10 pt-5 text-xs uppercase tracking-[0.24em]">
+          <div className="mt-6 grid grid-cols-2 gap-4 border-t border-champagne/10 pt-5 text-xs uppercase tracking-[0.24em] text-muted">
             <span>{vehicle.year}</span>
+            <span>{vehicle.mileage}</span>
+            <span>{vehicle.transmission}</span>
             <span className="text-linen">{vehicle.price}</span>
           </div>
         </div>
