@@ -62,7 +62,7 @@ export default function Home() {
                   onClick={() => toggleDrawer(drawer.id)}
                 >
                   <span>{drawer.title}</span>
-                  <span aria-hidden="true">+</span>
+                  <span aria-hidden="true">{isOpen ? "−" : "+"}</span>
                 </button>
               </h2>
               <div className={styles.panel} id={panelId} aria-hidden={!isOpen}>

@@ -51,13 +51,15 @@
 
 .drawer {
   position: relative;
-  margin-top: -2px;
+  margin-top: -1px;
   background: #fff;
-  border-top: 2px solid #000;
+  color: #000;
+  border-top: 1px solid #000;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 .drawer:last-child {
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
 }
 
 .drawer h2 {
@@ -65,6 +67,7 @@
 }
 
 .drawer button {
+  position: relative;
   display: flex;
   width: 100%;
   min-height: clamp(3.3rem, 5.05vw, 5.05rem);
@@ -77,18 +80,39 @@
   cursor: pointer;
   font: inherit;
   font-size: clamp(0.95rem, 2.07vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.045em;
   text-align: left;
 }
 
-.drawer button span:first-child {
-  transition: opacity 180ms ease;
+.drawer button::after {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #000;
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease;
 }
 
-.drawer button:hover span:first-child,
-.drawer button:focus-visible span:first-child {
-  opacity: 0.62;
+.drawer button:hover::after,
+.drawer button:focus-visible::after {
+  opacity: 1;
+}
+
+.open,
+.open button,
+.open button:hover,
+.open button:focus-visible {
+  background: #fff;
+  color: #000;
+}
+
+.open button::after,
+.open button:hover::after,
+.open button:focus-visible::after {
+  opacity: 0;
+  transition-duration: 0s;
 }
 
 .drawer button span:last-child {
@@ -106,6 +130,9 @@
 .open .panel {
   grid-template-rows: 1fr;
   visibility: visible;
+  border-bottom: 1px solid #000;
+  background: #fff;
+  color: #000;
   transition: grid-template-rows 560ms cubic-bezier(0.55, 0, 0.2, 1);
 }
 
@@ -180,6 +207,7 @@
 
 .featureCopy h3 {
   font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 0.95;
 }
@@ -220,7 +248,7 @@
 .contact > p {
   margin: 0;
   font-size: clamp(2rem, 4.5vw, 4.8rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 0.98;
 }
