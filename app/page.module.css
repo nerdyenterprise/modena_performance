@@ -79,8 +79,8 @@
   color: #000;
   cursor: pointer;
   font: inherit;
-  font-size: clamp(0.95rem, 2.07vw, 2.2rem);
-  font-weight: 600;
+  font-size: clamp(0.86rem, 1.88vw, 2rem);
+  font-weight: 500;
   letter-spacing: -0.045em;
   text-align: left;
 }
@@ -117,7 +117,7 @@
 
 .drawer button span:last-child {
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .panel {
@@ -276,7 +276,7 @@
 
 .footer {
   min-height: clamp(7rem, 11vw, 11rem);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .footer a {
@@ -305,7 +305,7 @@
 
   .drawer button {
     min-height: 3.3rem;
-    font-size: clamp(0.83rem, 4vw, 1.1rem);
+    font-size: clamp(0.75rem, 3.6vw, 1rem);
   }
 
   .feature,

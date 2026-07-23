@@ -17,6 +17,12 @@ const drawers: Array<{ id: DrawerId; title: string }> = [
   { id: "contact", title: "CONTACT" },
 ];
 
+const drawerImages: Record<string, string> = {
+  "mercedes-g63-amg": "/images/home/g63-warehouse-v2.png",
+  "bmw-x5m-competition": "/images/home/x5m-black-warehouse.png",
+  "porsche-911-gt3-touring": "/images/home/gt3rs-black-warehouse.png",
+};
+
 export default function Home() {
   const pathname = usePathname();
   const [openDrawer, setOpenDrawer] = useState<DrawerId | null>(null);
@@ -162,12 +168,12 @@ function EditorialImage({
   return (
     <div className={styles.image}>
       <Image
-        src={vehicle.image}
+        src={drawerImages[vehicle.slug] ?? vehicle.image}
         alt={vehicle.imageAlt}
         fill
         priority={priority}
         sizes="(min-width: 768px) 92vw, 100vw"
-        style={{ objectPosition: vehicle.imagePosition }}
+        style={{ objectPosition: "50% 50%" }}
         className={styles.imageElement}
       />
     </div>

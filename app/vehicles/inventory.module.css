@@ -1,0 +1,355 @@
+.inventory,
+.detail {
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.introduction {
+  display: grid;
+  min-height: 58svh;
+  padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 3.25vw, 4rem) clamp(4rem, 7vw, 7rem);
+  grid-template-columns: minmax(5rem, 0.22fr) minmax(0, 1.18fr) minmax(18rem, 0.6fr);
+  gap: clamp(2rem, 5vw, 7rem);
+  align-items: end;
+}
+
+.introduction p,
+.caption p,
+.detailHeader p,
+.sectionIndex,
+.enquiry > p {
+  margin: 0;
+}
+
+.index,
+.sectionIndex {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.introduction h1 {
+  margin: 0;
+  font-size: clamp(4rem, 11vw, 11rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.78;
+}
+
+.introduction > p:last-child {
+  max-width: 31rem;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.collection {
+  display: grid;
+  gap: clamp(7rem, 13vw, 14rem);
+  padding: 0 clamp(1.25rem, 3.25vw, 4rem);
+}
+
+.vehicle {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.imageLink {
+  display: block;
+  width: 78%;
+}
+
+.vehicle:nth-child(even) .imageLink,
+.vehicle:nth-child(even) .caption {
+  margin-left: auto;
+}
+
+.listImage,
+.heroImage,
+.detailImage {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.listImage {
+  min-height: min(54vw, 47rem);
+}
+
+.image {
+  object-fit: cover;
+  filter: brightness(0.88) saturate(0.82) sepia(0.06);
+}
+
+.caption {
+  display: grid;
+  width: 78%;
+  grid-template-columns: minmax(2rem, 0.12fr) minmax(12rem, 0.88fr) minmax(10rem, 0.35fr) auto;
+  gap: clamp(1rem, 3vw, 4rem);
+  align-items: end;
+  font-size: 0.78rem;
+}
+
+.caption h2 {
+  margin: 0.08em 0 0;
+  font-size: clamp(1.7rem, 3.5vw, 4rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 0.95;
+}
+
+.textLink,
+.collectionFooter a,
+.back a,
+.enquiry a {
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.collectionFooter {
+  display: flex;
+  min-height: clamp(19rem, 34vw, 34rem);
+  padding: clamp(6rem, 12vw, 12rem) clamp(1.25rem, 3.25vw, 4rem) 4rem;
+  align-items: end;
+  justify-content: space-between;
+  font-size: 0.78rem;
+}
+
+.collectionFooter p {
+  margin: 0;
+}
+
+.back {
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1.25rem, 3.25vw, 4rem) 0;
+  font-size: 0.72rem;
+}
+
+.detailHeader {
+  display: grid;
+  padding: clamp(5rem, 9vw, 9rem) clamp(1.25rem, 3.25vw, 4rem) clamp(2rem, 4vw, 4rem);
+  grid-template-columns: minmax(10rem, 0.35fr) minmax(0, 1fr) auto;
+  gap: clamp(2rem, 5vw, 7rem);
+  align-items: end;
+}
+
+.detailHeader h1 {
+  margin: 0;
+  font-size: clamp(3.5rem, 9vw, 9rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.8;
+}
+
+.heroImage {
+  min-height: min(69vw, 58rem);
+}
+
+.overview {
+  display: grid;
+  padding: clamp(7rem, 13vw, 14rem) clamp(1.25rem, 3.25vw, 4rem);
+  grid-template-columns: minmax(0, 1.25fr) minmax(18rem, 0.55fr);
+  gap: clamp(4rem, 12vw, 15rem);
+}
+
+.overview h2 {
+  max-width: 58rem;
+  margin: clamp(2rem, 4vw, 4rem) 0 0;
+  font-size: clamp(2.3rem, 5.5vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.specification {
+  display: grid;
+  margin: 0;
+  align-content: end;
+}
+
+.specification div {
+  display: flex;
+  padding: 0.9rem 0;
+  justify-content: space-between;
+  gap: 2rem;
+  border-bottom: 1px solid #000;
+  font-size: 0.76rem;
+}
+
+.specification dt,
+.specification dd {
+  margin: 0;
+}
+
+.specification dt {
+  color: #444;
+}
+
+.editorialBreak {
+  display: grid;
+  padding: 0 clamp(1.25rem, 3.25vw, 4rem) clamp(8rem, 14vw, 15rem);
+  grid-template-columns: minmax(0, 1.55fr) minmax(16rem, 0.45fr);
+  gap: clamp(2rem, 7vw, 9rem);
+  align-items: end;
+}
+
+.detailImage {
+  min-height: min(55vw, 50rem);
+}
+
+.vehicleGallery {
+  display: grid;
+  padding: 0 clamp(1.25rem, 3.25vw, 4rem) clamp(8rem, 14vw, 15rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.galleryWide,
+.galleryImage {
+  position: relative;
+  min-height: min(48vw, 46rem);
+  overflow: hidden;
+  background: #000;
+}
+
+.galleryWide {
+  min-height: min(62vw, 58rem);
+  grid-column: 1 / -1;
+}
+
+.highlights ul {
+  display: grid;
+  margin: 2.5rem 0 0;
+  padding: 0;
+  gap: 0.9rem;
+  list-style: none;
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+}
+
+.enquiry {
+  display: grid;
+  min-height: min(70svh, 50rem);
+  padding: clamp(6rem, 12vw, 12rem) clamp(1.25rem, 3.25vw, 4rem) clamp(4rem, 7vw, 7rem);
+  align-content: space-between;
+}
+
+.enquiry h2 {
+  max-width: 70rem;
+  margin: clamp(4rem, 8vw, 8rem) 0;
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.82;
+}
+
+.enquiry > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+  .introduction {
+    min-height: 52svh;
+    padding-top: 5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .introduction h1 {
+    font-size: clamp(3.8rem, 22vw, 6.5rem);
+  }
+
+  .introduction > p:last-child {
+    font-size: 0.92rem;
+  }
+
+  .collection {
+    gap: 7rem;
+  }
+
+  .imageLink,
+  .caption {
+    width: 100%;
+  }
+
+  .listImage,
+  .heroImage {
+    min-height: 72svh;
+  }
+
+  .caption {
+    grid-template-columns: 2rem 1fr;
+    gap: 0.8rem 1rem;
+  }
+
+  .caption > p:nth-of-type(2),
+  .caption > .textLink {
+    grid-column: 2;
+  }
+
+  .caption h2 {
+    font-size: clamp(1.7rem, 10vw, 2.7rem);
+  }
+
+  .collectionFooter {
+    min-height: 19rem;
+    align-items: end;
+  }
+
+  .collectionFooter p {
+    max-width: 12rem;
+  }
+
+  .detailHeader {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .detailHeader h1 {
+    font-size: clamp(3.5rem, 19vw, 6rem);
+    order: 2;
+  }
+
+  .detailHeader p:last-child {
+    order: 3;
+  }
+
+  .overview,
+  .editorialBreak {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .overview h2 {
+    font-size: clamp(2.2rem, 11vw, 4rem);
+  }
+
+  .detailImage {
+    min-height: 68svh;
+  }
+
+  .vehicleGallery {
+    grid-template-columns: 1fr;
+  }
+
+  .galleryWide,
+  .galleryImage {
+    min-height: 68svh;
+    grid-column: auto;
+  }
+
+  .enquiry {
+    min-height: 68svh;
+  }
+
+  .enquiry h2 {
+    font-size: clamp(3.8rem, 20vw, 6rem);
+  }
+
+  .enquiry > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
