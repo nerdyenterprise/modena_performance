@@ -105,7 +105,12 @@ function DrawerContent({ id }: { id: DrawerId }) {
       <div className={styles.featureSplit}>
         <EditorialImage vehicle={gt3} />
         <div className={styles.featureCopy}>
-          <p>{siteContent.pages.sourcing.copy}</p>
+          <h3 className={styles.sourcingTitle}>
+            <span>Representing collectors.</span>
+            <span>Enthusiasts.</span>
+            <span>Private clients.</span>
+          </h3>
+          <p className={styles.supportingCopy}>{siteContent.pages.sourcing.copy}</p>
           <Link href="/sourcing">Learn more →</Link>
         </div>
       </div>
@@ -117,8 +122,8 @@ function DrawerContent({ id }: { id: DrawerId }) {
       <div className={styles.featureSplit}>
         <EditorialImage vehicle={g63} />
         <div className={styles.featureCopy}>
-          <p>{siteContent.pages.sellYourCar.copy}</p>
-          <Link href="/sell-your-car">Start enquiry →</Link>
+          <p>Private brokerage for considered vehicles.</p>
+          <Link href="/sell-your-car">Start a private enquiry →</Link>
         </div>
       </div>
     );
@@ -127,9 +132,9 @@ function DrawerContent({ id }: { id: DrawerId }) {
   if (id === "about") {
     return (
       <div className={styles.editorialCopy}>
-        <p>{siteContent.pages.about.copy}</p>
+        <p>A considered approach to automotive representation.</p>
         <div>
-          {siteContent.pages.about.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          <p>{siteContent.pages.about.copy}</p>
           <Link href="/about">About MODENA →</Link>
         </div>
       </div>
@@ -138,7 +143,7 @@ function DrawerContent({ id }: { id: DrawerId }) {
 
   return (
     <div className={styles.contact}>
-      <p>{siteContent.pages.contact.copy}</p>
+      <p>Begin privately.</p>
       <div>
         <Link href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</Link>
         <Link href={siteContent.contact.whatsappBaseUrl}>WhatsApp →</Link>
