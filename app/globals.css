@@ -2,26 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: dark;
-  background: #08080c;
-  color: #f5f5f2;
-}
-
 * {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html,
+body {
+  margin: 0;
+  min-height: 100%;
 }
 
 body {
-  margin: 0;
-  background:
-    linear-gradient(90deg, rgba(205, 186, 148, 0.05), transparent 26%),
-    linear-gradient(180deg, #08080c 0%, #111113 44%, #08080c 100%);
-  color: #f5f5f2;
+  background: #ffffff;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -29,51 +23,63 @@ a {
   text-decoration: none;
 }
 
-input,
-textarea,
-select,
-button {
-  font: inherit;
+body:has(#phase-one-home) .site-header,
+body:has(#phase-one-home) .site-footer {
+  display: none;
 }
 
-::selection {
-  background: rgba(200, 173, 127, 0.32);
-  color: #fffaf0;
+body:has(#phase-one-home) .site {
+  display: block;
 }
 
-.image-slot {
-  position: relative;
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(245, 245, 242, 0.055), transparent 36%),
-    linear-gradient(160deg, #171718 0%, #08080c 62%, #2a2a2c 100%);
+.site {
+  display: grid;
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
 }
 
-.image-slot::after {
-  content: "";
-  position: absolute;
-  inset: clamp(1rem, 2vw, 1.75rem);
-  border: 1px solid rgba(205, 186, 148, 0.18);
+.site-header,
+.site-footer {
+  display: flex;
+  min-height: 4rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
 }
 
-.champagne-rule {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(205, 186, 148, 0.55), transparent);
+.site-header strong {
+  font-size: 0.75rem;
 }
 
-.section-shell {
-  width: 100%;
-  padding-inline: clamp(1.25rem, 4vw, 4.5rem);
+.site-main {
+  display: grid;
+  min-height: calc(100svh - 8rem);
+  padding: 2rem 1.5rem;
+  place-items: center;
+  text-align: center;
 }
 
-.section-inner {
-  margin-inline: auto;
-  max-width: 92rem;
+.site-main h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 1;
 }
 
-.editorial-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: #cdba94;
+.site-main p {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 640px) {
+  .site-header,
+  .site-footer {
+    min-height: 3.5rem;
+    padding-inline: 1rem;
+  }
+
+  .site-main {
+    min-height: calc(100svh - 7rem);
+    padding-inline: 1rem;
+  }
 }
