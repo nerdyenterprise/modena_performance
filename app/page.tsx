@@ -10,11 +10,11 @@ import styles from "./page.module.css";
 type DrawerId = "inventory" | "sourcing" | "sell" | "about" | "contact";
 
 const drawers: Array<{ id: DrawerId; title: string }> = [
-  { id: "inventory", title: "INVENTORY" },
-  { id: "sourcing", title: "SOURCING" },
-  { id: "sell", title: "SELL YOUR CAR" },
-  { id: "about", title: "ABOUT" },
-  { id: "contact", title: "CONTACT" },
+  { id: "inventory", title: "01 / INVENTORY" },
+  { id: "sourcing", title: "02 / SOURCING" },
+  { id: "sell", title: "03 / SELL YOUR CAR" },
+  { id: "about", title: "04 / ABOUT" },
+  { id: "contact", title: "05 / CONTACT" },
 ];
 
 const drawerImages: Record<string, string> = {
@@ -163,6 +163,7 @@ function DrawerContent({ id }: { id: DrawerId }) {
     <div className={styles.contact}>
       <p>Begin privately.</p>
       <div>
+        <Link href="/contact">Contact →</Link>
         <Link href={`mailto:${siteContent.contact.email}`}>{siteContent.contact.email}</Link>
         <Link href={siteContent.contact.whatsappBaseUrl}>WhatsApp →</Link>
       </div>

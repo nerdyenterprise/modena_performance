@@ -61,7 +61,7 @@ export function EnquiryForm({ email }: { email: string }) {
         <textarea name="message" rows={5} required />
       </label>
 
-      <button type="submit">Submit enquiry →</button>
+      <button type="submit">Begin enquiry →</button>
     </form>
   );
 }

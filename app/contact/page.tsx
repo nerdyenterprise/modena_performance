@@ -113,7 +113,9 @@ export default function ContactPage() {
           <Link href={`mailto:${siteContent.contact.email}`}>
             {siteContent.contact.email}
           </Link>
-          <Link href={siteContent.contact.whatsappBaseUrl}>WhatsApp →</Link>
+          <Link href={siteContent.contact.whatsappBaseUrl}>
+            Start a conversation →
+          </Link>
         </div>
       </section>
     </main>
