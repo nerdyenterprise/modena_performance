@@ -187,7 +187,6 @@
 
 .imageElement {
   object-fit: cover;
-  filter: grayscale(1);
 }
 
 .featureSplit {
