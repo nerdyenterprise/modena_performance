@@ -7,6 +7,29 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Modena | Performance is only part of the story.",
   description: "Luxury Automotive Brokerage",
+  icons: {
+    icon: [
+      {
+        url: "/brand/mp-favicon-v2.png",
+        type: "image/png",
+        sizes: "512x512",
+      },
+    ],
+    shortcut: [
+      {
+        url: "/brand/mp-favicon-v2.ico",
+        type: "image/x-icon",
+        sizes: "32x32",
+      },
+    ],
+    apple: [
+      {
+        url: "/brand/mp-apple-icon-v2.png",
+        type: "image/png",
+        sizes: "180x180",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
