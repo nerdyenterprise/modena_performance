@@ -48,8 +48,30 @@ body:has(#phase-one-home) .site {
   font-size: 0.75rem;
 }
 
+.site-header {
+  min-height: clamp(5.5rem, 9vw, 8rem);
+  padding: 0 clamp(1.25rem, 3.25vw, 4rem);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
 .site-header strong {
   font-size: 0.75rem;
+}
+
+.site-brand {
+  display: flex;
+  height: 96px;
+  align-items: center;
+  transform: translateY(8px);
+}
+
+.site-brand img {
+  display: block;
+  width: auto;
+  height: 96px;
+  filter: brightness(1.05) contrast(1.15);
 }
 
 .site-main {
@@ -72,10 +94,14 @@ body:has(#phase-one-home) .site {
 }
 
 @media (max-width: 640px) {
-  .site-header,
   .site-footer {
     min-height: 3.5rem;
     padding-inline: 1rem;
+  }
+
+  .site-header {
+    min-height: 5rem;
+    padding-inline: 1.25rem;
   }
 
   .site-main {

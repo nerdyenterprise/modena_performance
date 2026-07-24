@@ -1,0 +1,239 @@
+.sourcing {
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sourcing [data-reveal] {
+  opacity: 0.92;
+  transition: opacity 240ms ease-out;
+}
+
+.sourcing [data-reveal]:global(.is-visible) {
+  opacity: 1;
+}
+
+.hero {
+  display: grid;
+  min-height: 58svh;
+  padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 3.25vw, 4rem)
+    clamp(4rem, 7vw, 7rem);
+  grid-template-columns: minmax(5rem, 0.22fr) minmax(0, 1.18fr)
+    minmax(18rem, 0.6fr);
+  gap: clamp(2rem, 5vw, 7rem);
+  align-items: end;
+}
+
+.hero p,
+.philosophy p,
+.processSection p,
+.whatWeSource p,
+.enquiry > p {
+  margin: 0;
+}
+
+.index,
+.stepNumber {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(4rem, 11vw, 11rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.78;
+}
+
+@media (min-width: 761px) {
+  .hero h1 {
+    transform: translateX(clamp(-2rem, -2vw, -1rem));
+  }
+}
+
+.hero > p:last-child {
+  max-width: 31rem;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.philosophy {
+  display: grid;
+  padding: clamp(9rem, 15.5vw, 17rem) clamp(1.25rem, 3.25vw, 4rem);
+  grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.55fr);
+  gap: clamp(4rem, 12vw, 15rem);
+  align-items: end;
+}
+
+.philosophy h2 {
+  max-width: 58rem;
+  margin: clamp(2.4rem, 4.5vw, 4.5rem) 0 0;
+  font-size: clamp(2.3rem, 5.5vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.supportingCopy {
+  display: grid;
+  gap: 2rem;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.processSection {
+  padding: 0 clamp(1.25rem, 3.25vw, 4rem)
+    clamp(9rem, 15.5vw, 17rem);
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.22fr) 1fr;
+  gap: clamp(2rem, 5vw, 7rem);
+  align-items: end;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  padding-top: 0.4rem;
+  font-size: clamp(2.7rem, 6.3vw, 6.3rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.process {
+  display: grid;
+  margin-top: clamp(5rem, 9vw, 9rem);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 5rem);
+}
+
+.process h3 {
+  margin: clamp(2rem, 3vw, 3rem) 0 1.5rem;
+  font-size: clamp(1.4rem, 2.3vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.process article > p:last-child {
+  max-width: 20rem;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.5;
+}
+
+.whatWeSource {
+  padding: clamp(9rem, 15.5vw, 17rem) clamp(1.25rem, 3.25vw, 4rem);
+}
+
+.whatWeSource h2 {
+  max-width: 78rem;
+  margin: clamp(2rem, 4vw, 4rem) 0 0;
+  font-size: clamp(2.3rem, 5.5vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.whatWeSource h2 span {
+  display: block;
+}
+
+.whatWeSource > p:last-child {
+  max-width: 31rem;
+  margin: clamp(5rem, 9vw, 9rem) 0 0 auto;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.enquiry {
+  display: grid;
+  min-height: min(70svh, 50rem);
+  padding: clamp(6.75rem, 13.5vw, 13.5rem) clamp(1.25rem, 3.25vw, 4rem)
+    clamp(4.5rem, 7.75vw, 7.75rem);
+  align-content: space-between;
+}
+
+.enquiry h2 {
+  max-width: 70rem;
+  margin: clamp(4rem, 8vw, 8rem) 0;
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.82;
+}
+
+.enquiry > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 0.78rem;
+}
+
+.enquiry a {
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 52svh;
+    padding-top: 5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.8rem, 22vw, 6.5rem);
+  }
+
+  .hero > p:last-child {
+    font-size: 0.92rem;
+  }
+
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .philosophy h2,
+  .whatWeSource h2 {
+    font-size: clamp(2.2rem, 11vw, 4rem);
+  }
+
+  .sectionHeading,
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .sectionHeading {
+    gap: 1.5rem;
+  }
+
+  .process {
+    gap: 4rem;
+  }
+
+  .enquiry {
+    min-height: 68svh;
+  }
+
+  .enquiry h2 {
+    font-size: clamp(3.8rem, 20vw, 6rem);
+  }
+
+  .enquiry > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sourcing [data-reveal] {
+    opacity: 1;
+    transition: none;
+  }
+}

@@ -45,7 +45,19 @@ export default function Home() {
   return (
     <main id="phase-one-home" className={styles.page}>
       <header className={styles.header}>
-        <span>MODENA</span>
+        <Link
+          className={styles.brand}
+          href="/"
+          aria-label="Modena Performance home"
+        >
+          <Image
+            src="/brand/mp-monogram.png"
+            alt=""
+            width={700}
+            height={1020}
+            priority
+          />
+        </Link>
         <a href="#main-navigation">MENU</a>
       </header>
 

@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -16,8 +18,20 @@ export default function RootLayout({
       <body>
         <div className="site">
           <header className="site-header">
-            <strong>MODENA PERFORMANCE</strong>
-            <span>Menu</span>
+            <Link
+              className="site-brand"
+              href="/"
+              aria-label="Modena Performance home"
+            >
+              <Image
+                src="/brand/mp-monogram.png"
+                alt=""
+                width={700}
+                height={1020}
+                priority
+              />
+            </Link>
+            <Link href="/#main-navigation">MENU</Link>
           </header>
           {children}
           <footer className="site-footer">

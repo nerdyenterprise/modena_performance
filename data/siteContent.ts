@@ -38,7 +38,7 @@ export const siteContent = {
 
   contact: {
     // Update these when the business contact details change.
-    email: "concierge@modenaperformance.com",
+    email: "hello@modenaperformance.com",
     phoneDisplay: "WhatsApp Concierge",
     whatsappUrl:
       "https://wa.me/971000000000?text=Hello%20MODENA%2C%20I%20would%20like%20to%20discuss%20a%20vehicle.",

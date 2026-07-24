@@ -49,7 +49,7 @@ export default function InventoryPage() {
               </div>
               <p>{vehicle.year} · {vehicle.mileage}</p>
               <Link className={styles.textLink} href={`/vehicles/${vehicle.slug}`}>
-                View vehicle →
+                View details →
               </Link>
             </div>
           </article>

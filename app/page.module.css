@@ -26,6 +26,20 @@
   text-decoration: none;
 }
 
+.header .brand {
+  display: flex;
+  height: 96px;
+  align-items: center;
+  transform: translateY(8px);
+}
+
+.brand img {
+  display: block;
+  width: auto;
+  height: 96px;
+  filter: brightness(1.05) contrast(1.15);
+}
+
 .hero {
   display: grid;
   min-height: clamp(30rem, 68svh, 50rem);
@@ -37,7 +51,7 @@
 .hero h1 {
   margin: 0;
   font-size: clamp(2.025rem, 4.86vw, 4.77rem);
-  font-weight: 700;
+  font-weight: 500;
   letter-spacing: -0.065em;
   line-height: 0.9;
 }
