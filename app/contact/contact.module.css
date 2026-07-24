@@ -1,0 +1,296 @@
+.contact {
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact [data-reveal] {
+  opacity: 0.92;
+  transition: opacity 240ms ease-out;
+}
+
+.contact [data-reveal]:global(.is-visible) {
+  opacity: 1;
+}
+
+.hero {
+  display: grid;
+  min-height: 58svh;
+  padding: clamp(5rem, 10vw, 10rem) clamp(1.25rem, 3.25vw, 4rem)
+    clamp(4rem, 7vw, 7rem);
+  grid-template-columns: minmax(5rem, 0.22fr) minmax(0, 1.18fr)
+    minmax(18rem, 0.6fr);
+  gap: clamp(2rem, 5vw, 7rem);
+  align-items: end;
+}
+
+.hero p,
+.details p,
+.formSection p,
+.response p,
+.finalChapter > p {
+  margin: 0;
+}
+
+.index,
+.finalChapter > p {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(4rem, 11vw, 11rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.78;
+}
+
+.hero > div {
+  display: grid;
+  max-width: 31rem;
+  gap: 1.5rem;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.details,
+.response {
+  display: grid;
+  padding: clamp(9rem, 15.5vw, 17rem) clamp(1.25rem, 3.25vw, 4rem);
+  grid-template-columns: minmax(0, 1.3fr) minmax(18rem, 0.55fr);
+  gap: clamp(4rem, 12vw, 15rem);
+  align-items: end;
+}
+
+.details h2,
+.response h2 {
+  max-width: 58rem;
+  margin: clamp(2.4rem, 4.5vw, 4.5rem) 0 0;
+  font-size: clamp(2.3rem, 5.5vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.details dl {
+  display: grid;
+  margin: 0;
+  gap: 2rem;
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  line-height: 1.5;
+}
+
+.details dl div {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.details dt,
+.details dd {
+  margin: 0;
+}
+
+.details dt {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.details a,
+.finalChapter a {
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.formSection {
+  padding: 0 clamp(1.25rem, 3.25vw, 4rem)
+    clamp(9rem, 15.5vw, 17rem);
+}
+
+.sectionHeading {
+  display: grid;
+  grid-template-columns: minmax(5rem, 0.22fr) 1fr;
+  gap: clamp(2rem, 5vw, 7rem);
+  align-items: end;
+}
+
+.sectionHeading h2 {
+  margin: 0;
+  font-size: clamp(2.7rem, 6.3vw, 6.3rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+}
+
+.formSection form {
+  display: grid;
+  max-width: 72rem;
+  margin: clamp(6rem, 10vw, 10rem) 0 0 auto;
+  gap: clamp(3rem, 5vw, 5rem);
+}
+
+.formSection form > label,
+.formSection fieldset {
+  display: grid;
+  margin: 0;
+  padding: 0 0 1rem;
+  gap: 1.25rem;
+  border: 0;
+  border-bottom: 1px solid #000;
+}
+
+.formSection form > label > span,
+.formSection legend {
+  padding: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.formSection input,
+.formSection textarea,
+.formSection button {
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  background: transparent;
+  color: #000;
+  font: inherit;
+}
+
+.formSection input,
+.formSection textarea {
+  width: 100%;
+  padding: 0;
+  font-size: clamp(1.4rem, 2.6vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.formSection textarea {
+  resize: vertical;
+}
+
+.formSection fieldset > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem clamp(2rem, 5vw, 5rem);
+}
+
+.formSection fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+}
+
+.formSection fieldset input {
+  width: auto;
+  accent-color: #000;
+}
+
+.formSection button {
+  width: fit-content;
+  padding: 0 0 0.35rem;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  font-size: clamp(2.3rem, 5.5vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  text-align: left;
+}
+
+.supportingCopy {
+  display: grid;
+  gap: 2rem;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.5;
+}
+
+.finalChapter {
+  display: grid;
+  min-height: min(76svh, 56rem);
+  padding: clamp(6.75rem, 13.5vw, 13.5rem) clamp(1.25rem, 3.25vw, 4rem)
+    clamp(4.5rem, 7.75vw, 7.75rem);
+  align-content: space-between;
+}
+
+.finalChapter h2 {
+  max-width: 78rem;
+  margin: clamp(4rem, 8vw, 8rem) 0;
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 500;
+  letter-spacing: -0.075em;
+  line-height: 0.82;
+}
+
+.finalChapter h2 span {
+  display: block;
+}
+
+.finalChapter > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: 52svh;
+    padding-top: 5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.8rem, 22vw, 6.5rem);
+  }
+
+  .hero > div {
+    font-size: 0.92rem;
+  }
+
+  .details,
+  .response {
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+
+  .details h2,
+  .response h2 {
+    font-size: clamp(2.2rem, 11vw, 4rem);
+  }
+
+  .sectionHeading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .formSection form {
+    margin-top: 5rem;
+  }
+
+  .finalChapter {
+    min-height: 72svh;
+  }
+
+  .finalChapter h2 {
+    font-size: clamp(3.5rem, 18vw, 5.5rem);
+  }
+
+  .finalChapter > div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact [data-reveal] {
+    opacity: 1;
+    transition: none;
+  }
+}
