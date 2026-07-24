@@ -39,7 +39,7 @@ export default function SourcingPage() {
 
       <header className={styles.hero} data-reveal>
         <p className={styles.index}>01 / Sourcing</p>
-        <h1>SOURCING</h1>
+        <h1>Sourcing</h1>
         <p>
           Access to carefully sourced performance vehicles beyond our published
           inventory.

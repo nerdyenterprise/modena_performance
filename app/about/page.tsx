@@ -31,7 +31,7 @@ export default function AboutPage() {
 
       <header className={styles.hero} data-reveal>
         <p className={styles.index}>01 / About</p>
-        <h1>ABOUT</h1>
+        <h1>About</h1>
         <p>
           MODENA represents collectors, enthusiasts and private clients with a
           considered approach to sourcing, brokerage and vehicle sales.

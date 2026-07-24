@@ -3,18 +3,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import SiteMenu from "@/components/SiteMenu";
 import { siteContent, vehicles } from "@/data/siteContent";
 import styles from "./page.module.css";
 
-type DrawerId = "inventory" | "sourcing" | "sell" | "about" | "contact";
+type ChapterId = "inventory" | "sourcing" | "sell" | "about" | "contact";
 
-const drawers: Array<{ id: DrawerId; title: string }> = [
-  { id: "inventory", title: "INVENTORY" },
-  { id: "sourcing", title: "SOURCING" },
-  { id: "sell", title: "SELL YOUR CAR" },
-  { id: "about", title: "ABOUT" },
-  { id: "contact", title: "CONTACT" },
+const chapters: Array<{ id: ChapterId; title: string; intro: string }> = [
+  {
+    id: "inventory",
+    title: "Inventory",
+    intro: "An evolving selection of performance vehicles, chosen and presented with consideration.",
+  },
+  {
+    id: "sourcing",
+    title: "Sourcing",
+    intro: "Access to carefully sourced performance vehicles beyond our published inventory.",
+  },
+  {
+    id: "sell",
+    title: "Sell Your Car",
+    intro: "Trusted representation for owners who value discretion, presentation and considered negotiation.",
+  },
+  {
+    id: "about",
+    title: "About",
+    intro: "MODENA represents collectors, enthusiasts and private clients with a considered approach to sourcing, brokerage and vehicle sales.",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+    intro: "Every conversation begins with understanding your requirements.",
+  },
 ];
 
 const drawerImages: Record<string, string> = {
@@ -25,11 +45,6 @@ const drawerImages: Record<string, string> = {
 
 export default function Home() {
   const pathname = usePathname();
-  const [openDrawer, setOpenDrawer] = useState<DrawerId | null>(null);
-
-  function toggleDrawer(id: DrawerId) {
-    setOpenDrawer((current) => (current === id ? null : id));
-  }
 
   if (pathname !== "/") {
     return (
@@ -58,7 +73,7 @@ export default function Home() {
             priority
           />
         </Link>
-        <a href="#main-navigation">MENU</a>
+        <SiteMenu />
       </header>
 
       <section className={styles.hero} aria-labelledby="home-title">
@@ -66,31 +81,15 @@ export default function Home() {
       </section>
 
       <section id="main-navigation" className={styles.navigation} aria-label="Main navigation">
-        {drawers.map((drawer) => {
-          const isOpen = openDrawer === drawer.id;
-          const panelId = `${drawer.id}-panel`;
-
-          return (
-            <article className={`${styles.drawer} ${isOpen ? styles.open : ""}`} key={drawer.id}>
-              <h2>
-                <button
-                  type="button"
-                  aria-expanded={isOpen}
-                  aria-controls={panelId}
-                  onClick={() => toggleDrawer(drawer.id)}
-                >
-                  <span>{drawer.title}</span>
-                  <span aria-hidden="true">{isOpen ? "−" : "+"}</span>
-                </button>
-              </h2>
-              <div className={styles.panel} id={panelId} aria-hidden={!isOpen}>
-                <div className={styles.panelInner}>
-                  <DrawerContent id={drawer.id} />
-                </div>
-              </div>
-            </article>
-          );
-        })}
+        {chapters.map((chapter) => (
+          <article className={styles.chapter} id={chapter.id} key={chapter.id}>
+            <div className={styles.chapterHeading}>
+              <h2>{chapter.title}</h2>
+              <p>{chapter.intro}</p>
+            </div>
+            <ChapterContent id={chapter.id} />
+          </article>
+        ))}
       </section>
 
       <footer className={styles.footer}>
@@ -111,7 +110,7 @@ export default function Home() {
   );
 }
 
-function DrawerContent({ id }: { id: DrawerId }) {
+function ChapterContent({ id }: { id: ChapterId }) {
   const [g63, x5m, gt3] = vehicles;
 
   if (id === "inventory") {
@@ -130,7 +129,7 @@ function DrawerContent({ id }: { id: DrawerId }) {
 
   if (id === "sourcing") {
     return (
-      <div className={styles.featureSplit}>
+      <div className={`${styles.featureSplit} ${styles.reverse}`}>
         <EditorialImage vehicle={gt3} />
         <div className={styles.featureCopy}>
           <h3 className={styles.sourcingTitle}>
@@ -160,7 +159,7 @@ function DrawerContent({ id }: { id: DrawerId }) {
   if (id === "about") {
     return (
       <div className={styles.editorialCopy}>
-        <p>A considered approach to automotive representation.</p>
+        <p>Performance is only part of the story.</p>
         <div>
           <p>{siteContent.pages.about.copy}</p>
           <Link href="/about">About MODENA →</Link>

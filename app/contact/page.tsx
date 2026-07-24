@@ -17,7 +17,7 @@ export default function ContactPage() {
 
       <header className={styles.hero} data-reveal>
         <p className={styles.index}>01 / Contact</p>
-        <h1>CONTACT</h1>
+        <h1>Contact</h1>
         <div>
           <p>Every conversation begins with understanding your requirements.</p>
           <p>

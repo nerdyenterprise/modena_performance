@@ -60,6 +60,77 @@ body:has(#phase-one-home) .site {
   font-size: 0.75rem;
 }
 
+.site-menu-trigger,
+.site-menu-close {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
+
+.site-menu-trigger:focus-visible,
+.site-menu-close:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
+.site-menu-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  display: grid;
+  min-height: 100dvh;
+  padding: 0 clamp(1.25rem, 3.25vw, 4rem) clamp(2rem, 5vw, 5rem);
+  grid-template-rows: auto 1fr;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.site-menu-top {
+  display: flex;
+  min-height: clamp(5.5rem, 9vw, 8rem);
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.site-menu-navigation {
+  display: grid;
+  padding-block: clamp(1rem, 2vw, 2rem);
+  align-content: center;
+  justify-items: start;
+  gap: clamp(0.3rem, 1vh, 0.8rem);
+}
+
+.site-menu-navigation a {
+  font-size: clamp(3.2rem, 8vh, 6.5rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+  text-decoration: none;
+  transition: transform 140ms ease;
+}
+
+.site-menu-navigation a:hover {
+  transform: translateX(0.25rem);
+}
+
+.site-menu-navigation a:focus-visible {
+  outline: none;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
 .site-brand {
   display: flex;
   height: 96px;
@@ -102,6 +173,19 @@ body:has(#phase-one-home) .site {
   .site-header {
     min-height: 5rem;
     padding-inline: 1.25rem;
+  }
+
+  .site-menu-top {
+    min-height: 5rem;
+  }
+
+  .site-menu-navigation {
+    gap: 0.75rem;
+  }
+
+  .site-menu-navigation a {
+    font-size: clamp(2.7rem, 12vw, 4.2rem);
+    line-height: 0.94;
   }
 
   .site-main {

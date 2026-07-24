@@ -59,7 +59,7 @@ export default function SellYourCarPage() {
 
       <header className={styles.hero} data-reveal>
         <p className={styles.index}>01 / Sell your car</p>
-        <h1>SELL YOUR CAR</h1>
+        <h1>Sell Your Car</h1>
         <p>
           Trusted representation for owners who value discretion, presentation
           and considered negotiation.
