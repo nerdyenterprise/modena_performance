@@ -24,7 +24,7 @@ export default function RootLayout({
               aria-label="Modena Performance home"
             >
               <Image
-                src="/brand/mp-monogram.png"
+                src="/brand/mp-monogram-transparent.png"
                 alt=""
                 width={700}
                 height={1020}
@@ -36,6 +36,7 @@ export default function RootLayout({
           {children}
           <footer className="site-footer">
             <span>© 2026 MODENA PERFORMANCE</span>
+            <Link href="/terms">Terms</Link>
           </footer>
         </div>
       </body>

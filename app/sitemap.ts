@@ -4,7 +4,7 @@ import { siteContent, vehicles } from "@/data/siteContent";
 const baseUrl = siteContent.metadata.siteUrl;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/vehicles", "/sourcing", "/sell-your-car", "/about", "/contact"].map((route) => ({
+  const routes = ["", "/vehicles", "/sourcing", "/sell-your-car", "/about", "/contact", "/terms"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
   }));

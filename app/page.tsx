@@ -51,7 +51,7 @@ export default function Home() {
           aria-label="Modena Performance home"
         >
           <Image
-            src="/brand/mp-monogram.png"
+            src="/brand/mp-monogram-transparent.png"
             alt=""
             width={700}
             height={1020}
@@ -95,7 +95,10 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <span>MODENA PERFORMANCE</span>
-        <Link href="#" aria-label="MODENA PERFORMANCE on Instagram">INSTAGRAM</Link>
+        <div>
+          <Link href="#" aria-label="MODENA PERFORMANCE on Instagram">INSTAGRAM</Link>
+          <Link href="/terms">TERMS</Link>
+        </div>
       </footer>
     </main>
   );
