@@ -4,7 +4,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "MODENA PERFORMANCE",
+  title: "Modena | Performance is only part of the story.",
   description: "Luxury Automotive Brokerage",
 };
 
