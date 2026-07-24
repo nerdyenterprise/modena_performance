@@ -18,9 +18,9 @@ const drawers: Array<{ id: DrawerId; title: string }> = [
 ];
 
 const drawerImages: Record<string, string> = {
-  "mercedes-g63-amg": "/images/home/g63-warehouse-v2.png",
-  "bmw-x5m-competition": "/images/home/x5m-black-warehouse.png",
-  "porsche-911-gt3-touring": "/images/home/gt3rs-black-warehouse.png",
+  "mercedes-g63-amg": "/images/inventory/views/g63-amg-front.png",
+  "bmw-x5m-competition": "/images/inventory/views/x5m-competition-front.png",
+  "porsche-911-gt3-touring": "/images/inventory/views/911-gt3-rs-front.png",
 };
 
 export default function Home() {
@@ -96,7 +96,14 @@ export default function Home() {
       <footer className={styles.footer}>
         <span>MODENA PERFORMANCE</span>
         <div>
-          <Link href="#" aria-label="MODENA PERFORMANCE on Instagram">INSTAGRAM</Link>
+          <Link
+            href="https://www.instagram.com/modena.performance/"
+            aria-label="MODENA PERFORMANCE on Instagram"
+            target="_blank"
+            rel="noreferrer"
+          >
+            INSTAGRAM
+          </Link>
           <Link href="/terms">TERMS</Link>
         </div>
       </footer>
